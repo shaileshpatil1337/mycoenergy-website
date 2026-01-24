@@ -6,6 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="MycoEnergy Pvt. Ltd. in Akola offers premium mushroom cookies, mushroom papad and mushroom chocolates made with oyster mushrooms." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Floating WhatsApp Button - Add to your styles.css or inline */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+      animation: pulse 2s infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      background-color: #128c7e;
+      transform: scale(1.1);
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    /* Product image styles */
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -67,6 +106,8 @@
 
         <div class="cards-grid">
           <article class="card glass">
+            <img src="cookies.jpg" alt="Mushroom Cookies" class="product-image">
+            <!-- Replace 'cookies.jpg' with your image URL, e.g., 'https://your-s3-bucket/cookies.jpg' -->
             <h3>Mushroom Cookies</h3>
             <p>Crisp, balanced cookies made with mushroom powder and quality ingredients, ideal for daily snacking.</p>
             <ul>
@@ -78,6 +119,8 @@
           </article>
 
           <article class="card glass">
+            <img src="papad.jpg" alt="Mushroom Papad" class="product-image">
+            <!-- Replace 'papad.jpg' with your image URL -->
             <h3>Mushroom Papad</h3>
             <p>Thin, crunchy papad enhanced with mushroom, great as a side dish or tea-time snack.</p>
             <ul>
@@ -89,6 +132,8 @@
           </article>
 
           <article class="card glass">
+            <img src="chocolates.jpg" alt="Mushroom Chocolates" class="product-image">
+            <!-- Replace 'chocolates.jpg' with your image URL -->
             <h3>Mushroom Chocolates</h3>
             <p>Fusion chocolates that blend cocoa with mushroom extract or powder for a unique functional treat.</p>
             <ul>
@@ -132,7 +177,7 @@
       </div>
     </section>
 
-<section id="contact" class="section section-soft">
+    <section id="contact" class="section section-soft">
       <div class="wrap contact-grid">
         <div>
           <h2>Contact & Orders</h2>
@@ -179,13 +224,15 @@
       </div>
     </section>
   </main>
-<div style="margin-top:10px;">
-  <a href="https://wa.me/917020752046?text=Hello%20MycoEnergy,%20I%20want%20to%20enquire"
-     target="_blank"
-     class="btn btn-secondary">
-    Contact on WhatsApp
+
+  <!-- Floating WhatsApp Contact Button -->
+  <a href="https://wa.me/917020752046?text=Hello%20MycoEnergy!%20I'm%20interested%20in%20your%20mushroom%20products%20(cookies,%20papad,%20chocolates).%20Please%20share%20details!" 
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Contact us on WhatsApp">
+    💬
   </a>
-</div>
+
+  <!-- Remove the old inline button div here -->
+
   <footer class="footer">
     <div class="wrap footer-wrap">
       <span>© <span id="year"></span> MycoEnergy Pvt. Ltd.</span>
@@ -208,5 +255,3 @@
   </script>
 </body>
 </html>
-    
-
