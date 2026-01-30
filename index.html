@@ -21,20 +21,25 @@
       font-size: 30px;
       box-shadow: 2px 2px 3px #999;
       z-index: 100;
-      animation: pulse 2s infinite;
+      animation: pulse 2s infinite, float 3s ease-in-out infinite;
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
+      transition: transform 0.3s ease;
     }
     .whatsapp-float:hover {
       background-color: #128c7e;
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
     @keyframes pulse {
       0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
       70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
       100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
     }
     /* Product image styles */
     .product-image {
@@ -43,6 +48,11 @@
       object-fit: cover;
       border-radius: 12px;
       margin-bottom: 1rem;
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1), filter 0.4s ease;
+    }
+    .card:hover .product-image {
+      transform: scale(1.08) rotateZ(-1deg);
+      filter: brightness(1.1);
     }
   </style>
 </head>
