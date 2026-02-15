@@ -210,53 +210,76 @@
       </div>
     </section>
 
-    <section id="contact" class="section section-soft">
-      <div class="wrap contact-grid">
-        <div>
-          <h2>Contact & Orders</h2>
-          <p>Reach out to place orders, request samples or discuss dealership and distribution.</p>
-          <div class="card glass contact-card">
-            <p><strong>Company:</strong> MycoEnergy Pvt. Ltd.</p>
-            <p><strong>Phone / WhatsApp:</strong> +91-7020752046</p>
-            <p><strong>Phone / WhatsApp:</strong> +91-9067976191</p>
-            <p><strong>Email:</strong> info@mycoenergy.live</p>
-            <p><strong>Address:</strong> Akola, Maharashtra, India</p>
-          </div>
-        </div>
+<section id="contact" class="section section-soft">
+  <div class="wrap contact-grid">
 
-        <div class="card glass">
-          <h3>Quick enquiry</h3>
-          <form class="form">
-            <label>
-              Name
-              <input type="text" name="name" placeholder="Your name" required />
-            </label>
-            <label>
-              Phone / WhatsApp
-              <input type="tel" name="phone" placeholder="Your number" required />
-            </label>
-            <label>
-              I am interested in
-              <select name="interest">
-                <option value="cookies">Mushroom cookies</option>
-                <option value="papad">Mushroom papad</option>
-                <option value="chocolates">Mushroom chocolates</option>
-                <option value="all">All products</option>
-              </select>
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="3" placeholder="Tell us what you need (order / bulk / dealership)"></textarea>
-            </label>
-            <button type="submit" class="btn btn-primary full">Send enquiry</button>
-          </form>
-          <p class="note">
-            .
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
+    <!-- Contact Info -->
+    <div>
+      <h2>Contact Information</h2>
+      <p><strong>Phone:</strong> +91 70207 52046</p>
+      <p><strong>Phone:</strong> +91 90679 76191</p>
+      <p><strong>Email:</strong> info@mycoenergy.live</p>
+      <p><strong>Location:</strong> Akola, Maharashtra, India</p>
+    </div>
+
+    <!-- Enquiry Form -->
+    <div class="card glass">
+      <h2>Send Enquiry</h2>
+
+      <form id="whatsappForm" class="form">
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <input type="tel" id="phone" placeholder="Your phone number" required>
+
+        <select id="product">
+          <option>Mushroom cookies</option>
+          <option>Mushroom papad</option>
+          <option>Mushroom chocolates</option>
+          <option>All products</option>
+        </select>
+
+        <select id="type">
+          <option>Retail order</option>
+          <option>Bulk order</option>
+          <option>Dealership</option>
+          <option>General enquiry</option>
+        </select>
+
+        <select id="whatsapp">
+          <option value="917020752046">Support – +91 70207 52046</option>
+          <option value="919067976191">Sales – +91 90679 76191</option>
+        </select>
+
+        <textarea id="message" rows="3" placeholder="Additional details"></textarea>
+
+        <button class="btn btn-primary full" type="submit">
+          Send on WhatsApp
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const msg =
+    `Hello MycoEnergy,%0A` +
+    `Name: ${name.value}%0A` +
+    `Phone: ${phone.value}%0A` +
+    `Product: ${product.value}%0A` +
+    `Enquiry: ${type.value}%0A` +
+    `Message: ${message.value}`;
+
+  window.open(
+    `https://wa.me/${whatsapp.value}?text=${msg}`,
+    "_blank"
+  );
+});
+</script>
+
 
   <!-- Floating WhatsApp Contact Button -->
   <a href="https://wa.me/919067976191?text=Hello%20MycoEnergy!%20I'm%20interested%20in%20your%20mushroom%20products%20(cookies,%20papad,%20chocolates).%20Please%20share%20details!" 
@@ -293,6 +316,7 @@
   </script>
 </body>
 </html>
+
 
 
 
